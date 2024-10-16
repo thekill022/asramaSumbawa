@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <title>Asrama Sumbawa</title>
+  <style>
+
+
+.head {
+  margin-top: 30px;
+  height: 75vh;
+  background-image: url('assets/IMG-20240526-WA0106.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -120px;
+  overflow: hidden;
+}
+
+.head > .grad > h1 {
+  color: white;
+  font-weight: bolder;
+  margin-left: 20px;
+  padding-top: 10%;
+}
+
+.grad > p {
+  color: white;
+  font-weight: bolder;
+  margin-left: 20px;
+}
+
+.grad > a {
+  margin-left: 20px;
+}
+
+.grad {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0.771), rgba(255, 255, 255, 0.277));
+}
+
+.primary-color {
+  color: rgb(2, 208, 2);
+}
+
+.primary-bg {
+  background-color: rgb(2, 208, 2);
+  border: none;
+}
+
+.secondary-bg {
+  background-color: rgba(128, 128, 128, 0.177);
+}
+
+.btn-color {
+  background-color: rgb(2, 208, 2);
+  border: none;
+}
+
+
+
+.img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.struktur-card {
+  width: 250px;
+  height: 300px;
+}
+
+.struktur > h1 {
+  border-radius: 0px 20px 20px 0px;
+  margin-bottom: 50px;
+}
+
+.grid-item {
+  background-color: yellow;
+  overflow: hidden;
+}
+
+.grid-item > img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.img-galeri-1 {
+  grid-area: img-1;
+}
+.img-galeri-2 {
+  grid-area: img-2;
+}
+.img-galeri-3 {
+  grid-area: img-3;
+}
+.img-galeri-4 {
+  grid-area: img-4;
+}
+.img-galeri-5 {
+  grid-area: img-5;
+}
+.img-galeri-6 {
+  grid-area: img-6;
+}
+.img-galeri-7 {
+  grid-area: img-7;
+}
+
+.about-img > .img-1 {
+  grid-area: about-1;
+}
+.about-img > .img-2 {
+  grid-area: about-2;
+}
+.about-img > .img-3 {
+  grid-area: about-3;
+}
+
+.about-img {
+  display: grid;
+  grid-template-areas: 'about-1 about-1' 'about-2 about-3';
+  gap: 10px;
+}
+
+.galeri-image {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: 
+  'img-1 img-1 img-2'
+  'img-1 img-1 img-3'
+  'img-4 img-5 img-3'
+  'img-6 img-7 img-7';
+}
+
+.galeri-title {
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: rgb(2, 208, 2);
+}
+
+.meet-text {
+  border-radius: 0 0 20px 0;
+  margin-bottom: 20px;
+}
+
+.my-ig {
+  text-decoration: none;
+}
+
+.button-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.navbar-brand {
+  font-size: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .about-text {
+    font-size: 1.3rem;
+  }
+
+}
+
+@media only screen and (max-width: 805px){
+    .head {
+      background-position: 0px 20px;
+    }
+
+    .about-text {
+  font-size: 70%;
+}
+
+}
+
+@media only screen and (max-width: 425px) {
+  .foot-text {
+    font-size: 70%;
+  }
+}
+
+.card-title {
+  font-size: 1.1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.card {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.overflow-x-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <!-- nav : home, profil, struktur, galeri, lokasi footer -->
+
+  <nav class="navbar navbar-expand-lg sticky-top bg-white">
+    <div class="container-fluid px-2 px-md-5">
+      <a class="navbar-brand" href="#">
+        <img src="assets/IMG-20240526-WA0082 (1).jpg" alt="Bootstrap" width="60" height="48">
+      </a>
+      <a class="navbar-brand fw-bold fst-italic" href="#">Asrama Sumbawa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">  <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#profil">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#struktur">Struktur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#galeri">Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#lokasi">Meet Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="mb-5">
+    <div class="head h-100">
+        <div class="grad h-auto h-100-md d-flex align-items-center justify-content-between px-4">
+          <div>
+            <h1 class="pt-5 text-white">
+              <span class="primary-color">Selamat Datang,</span> Pemuda <br>Pemudi Samawa Di Yogyakarta
+            </h1>
+            <p class="text-white">
+              Website resmi asrama pelajar dan mahasiswa Sumbawa - Yogyakarta
+            </p>
+            <a href="#profil" class="btn btn-success btn-color mb-5">Tentang Kami</a>
+          </div>
+          <div class="mt-4 card-contain d-none d-lg-flex gap-3 flex-nowrap overflow-x-scroll p-4 w-50">
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+
+  <div class="mt-4 card-contain2 d-flex d-lg-none gap-3 flex-nowrap overflow-x-scroll p-4">
+    
+  </div>
+
+  <section class="my-5">
+    <div class="profil" id="profil">
+      <h1 class="fw-bolder text-center mb-5">Profil <br><span class="primary-color">APMSY - Jogja</span> </h1>
+
+      <article class="d-flex gap-4 p-3 flex-column-reverse flex-lg-row align-items-center justify-content-evenly">
+
+        <div class="p-4 secondary-bg w-100 about-text fs-5 fs-4-sm">
+          Asrama Pelajar Mahasiswa Sumbawa Yogyakarta (APMSY) adalah pusat kehidupan bagi pelajar dan mahasiswa asal Sumbawa yang studi di Yogyakarta, berfungsi sebagai tempat tinggal yang nyaman sekaligus sekretariat untuk organisasi TAU SAMAWA, termasuk IKMPSY dan IKS. Terletak di pusat kota, APMSY mendukung jaringan sosial dan budaya anggotanya melalui berbagai kegiatan komunitas, diskusi, dan pertemuan rutin. Fasilitas seperti ruang belajar dan area bersantai memfasilitasi interaksi antar penghuni, menjadikan APMSY bukan hanya tempat tinggal, tetapi juga pusat berkumpul strategis. Dengan komitmen untuk menciptakan suasana yang produktif, APMSY berperan penting dalam mendukung kesuksesan akademis dan perkembangan pribadi pelajar dan mahasiswa Sumbawa.</div>
+        <div class="about-img p-3 w-100">
+          <div class="img-1">
+            <img src="assets/IMG-20240526-WA0095.jpg" alt="" class="img-fluid">
+          </div>         
+            <div class="img-2">
+              <img src="assets/IMG-20240526-WA0116.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="img-3">
+              <img src="assets/IMG-20240526-WA0117.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    
+    <div class="struktur-organisasi">
+      <!-- Ketua -->
+      <div class="struktur-card d-flex justify-content-center align-items-center w-100 mb-3">
+        <div class="d-flex justify-content-center flex-column align-items-center">
+          <div class="img rounded-circle">
+            <img alt="" class="w-100 pengurus-foto">
+          </div>
+          <h3 class="fw-bolder text-center">Ketua</h3>
+          <h5 class="text-secondary text-center">Muhammad Ikhtiar Robbani</h5>
+        </div>
+      </div>
+    
+      <!-- Sekretaris dan Bendahara -->
+      <div class="d-flex flex-column flex-md-row justify-content-around mb-3 align-items-center">
+        <!-- Sekretaris -->
+        <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+          <div>
+            <div class="img rounded-circle">
+              <img alt="" class="w-100 pengurus-foto">
+            </div>
+            <h3 class="fw-bolder text-center">Sekretaris</h3>
+            <h5 class="text-secondary text-center">Anwar Sadat</h5>
+          </div>
+        </div>
+    
+        <!-- Bendahara -->
+        <div class="struktur-card d-flex justify-content-center align-items-center">
+          <div>
+            <div class="img rounded-circle">
+              <img alt="" class="w-100 pengurus-foto">
+            </div>
+            <h3 class="fw-bolder text-center">Bendahara</h3>
+            <h5 class="text-secondary text-center">Reza Afri Wahyudi</h5>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Divisi -->
+      <div class="divisi">
+        <h3 class="text-center">Bidang Pemeliharaan Aset Dan Inventaris</h3>
+        <div class="d-flex flex-column flex-md-row justify-content-around mb-3 align-items-center">
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Asgar</h5>
+            </div>
+          </div>
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Adji</h5>
+            </div>
+          </div>
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Fikri</h5>
+            </div>
+          </div>
+        </div>
+    
+        <h3 class="text-center">Bidang Kepemudaan Dan Humas</h3>
+        <div class="d-flex flex-column flex-md-row justify-content-around mb-3 align-items-center">
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Imam Syafi'i</h5>
+            </div>
+          </div>
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Didit</h5>
+            </div>
+          </div>
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Rama</h5>
+            </div>
+          </div>
+        </div>
+    
+        <h3 class="text-center">Bidang Pengembangan Dan Kerohanian</h3>
+        <div class="d-flex flex-column flex-md-row justify-content-around mb-3 align-items-center">
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Aldiansyah</h5>
+            </div>
+          </div>
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Haikal</h5>
+            </div>
+          </div>
+          <div class="struktur-card d-flex justify-content-center align-items-center mb-2 mb-md-0">
+            <div>
+              <div class="img rounded-circle">
+                <img alt="" class="w-100 pengurus-foto">
+              </div>
+              <h3 class="fw-bolder text-center">Anggota</h3>
+              <h5 class="text-secondary text-center">Faris Ayus</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </section>
+
+  <section class="galeri my-5" id="galeri">
+    <div class="d-flex justify-content-center">
+      <h1 class="text-center galeri-title">Galeri <span class="primary-color">APMSY</span></h1>
+    </div>
+
+    <div class="galeri-image p-4">
+
+      <div class="img-galeri-1 grid-item">
+        <img src="assets/IMG-20240526-WA0085.jpg" alt="">
+      </div>
+      <div class="img-galeri-2 grid-item">
+        <img src="assets/IMG-20240526-WA0086.jpg" alt="" >
+      </div>
+      <div class="img-galeri-3 grid-item">
+        <img src="assets/IMG-20240526-WA0090.jpg" alt="" >
+      </div>
+      <div class="img-galeri-4 grid-item">
+        <img src="assets/IMG-20240526-WA0095.jpg" alt="" >
+      </div>
+      <div class="img-galeri-5 grid-item">
+        <img src="assets/IMG-20240526-WA0096.jpg" alt="" >
+      </div>
+      <div class="img-galeri-6 grid-item">
+        <img src="assets/IMG-20240526-WA0106.jpg" alt="">
+      </div>
+      <div class="img-galeri-7 grid-item">
+        <img src="assets/IMG-20240526-WA0116.jpg" alt="" >
+      </div>
+
+    </div>
+  </section>
+
+  <section id="lokasi" class="secondary-bg d-flex justify-content-center flex-column pb-4">
+    <div class="meet-div d-flex justify-content-start">
+      <h1 class="text-center  primary-bg text-white primary-color p-3 w-15 fw-bolder meet-text">MEET US</h1>
+
+    </div>
+    <div class="d-flex flex-column flex-lg-row p-3 gap-3 justify-content-evenly justify-content-lg-center">
+      <div class=" w-100">
+        <iframe height="440" width="100%" src="https://www.instagram.com/asrama_sumbawa/embed/" frameborder="0"></iframe>
+      </div>
+      <div class="d-flex justify-content-center p-3 bg-light w-100" style="min-height: 450px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.97042469609386!2d110.36860861149255!3d-7.79597700153124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a582820f565e3%3A0xaab1a94caee5f0f!2sAsrama%20Sumbawa%20Besar!5e0!3m2!1sid!2sid!4v1724573185657!5m2!1sid!2sid" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>      
+    </div>
+
+  </section>
+
+  <div class="button-up d-none">
+    <a href="#" class="primary-color">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+      </svg>
+    </a>
+  </div>
+
+  <footer class="p-3 d-flex justify-content-center bg-dark text-white foot-text">
+    <div>
+      &copy; Copyright <b>APMSY - Yogyakarta</b>. All Rights Reserved
+      <div class="d-flex justify-content-center">
+        <span>
+          Created By <a href="https://www.instagram.com/fathonigib_/" target="_blank" class="my-ig primary-color">@fathonigib_</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="jquery-3.7.1.min.js"></script>
+
+
+  <script type="module">
+
+let foto = document.querySelectorAll('.pengurus-foto')
+console.log(foto)
+for ( let pic in foto) {
+  if(pic < 12) {
+    foto[pic].src = `pengurus/${parseInt(pic) + 1}.jpg`
+  }
+}
+
+let buttonUp = document.querySelector('.button-up');
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 200) {
+        buttonUp.classList.remove('d-none')
+      } else {
+        buttonUp.classList.add('d-none')
+      }
+    })
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+  import { getDatabase, ref, child, get, set } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyBdosUaZdDfKI_CQCbLt_Y4ZUzj5GCzV_0",
+    authDomain: "asramasumbawa.firebaseapp.com",
+    databaseURL: "https://asramasumbawa-default-rtdb.firebaseio.com",
+    projectId: "asramasumbawa",
+    storageBucket: "asramasumbawa.appspot.com",
+    messagingSenderId: "256491092275",
+    appId: "1:256491092275:web:32bd50a96e8dfceba96646",
+    measurementId: "G-ZDD11HDJC4"
+  };
+
+  
+  const app = initializeApp(firebaseConfig);
+
+// writeUserData()
+
+function readData() {
+  let db = ref(getDatabase())
+  get(child(db, 'users'))
+  .then((x) => {
+    if (x.exists()) {
+      let a = Array.of(x)
+      console.log(x.val())
+
+      const myArray = Object.values(x.val());
+
+      let judul = document.querySelector('.card-title')
+      let isi = document.querySelector('.card-text')
+      let contain_card = document.querySelector('.card-contain')
+      let containCard = document.querySelector('.card-contain2')
+      for (let i = 0; i < myArray.length; i++) {
+
+       let card = `<div class="card">
+                    <img src="${myArray[i].imageUrl} class="card-img-top img-fluid" alt="..." style="object-fit : cover; height : 200px;">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        ${myArray[i].judul}
+                      </h5>
+                      <p class="card-text">
+                        ${myArray[i].atikel}
+                      </p>
+                      <a class="btn btn-success btn-color btn-news">
+                        Lihat Berita
+                      </a>
+                    </div>
+                   </div>`
+        let div = document.createElement('div')
+        div.innerHTML = card
+
+        function handelResize() {
+          if (window.innerWidth >= 992) {
+            contain_card.appendChild(div);
+          } else {
+            containCard.appendChild(div)
+          }
+        }
+        handelResize()
+        window.addEventListener('resize', handelResize)
+        
+      }
+
+
+    } else {
+      console.log('error maniez')
+    }
+  })
+  .catch((e) => {
+    console.log(e)
+  })
+}
+
+readData()
+
+  </script>
+</body>
+</html>
